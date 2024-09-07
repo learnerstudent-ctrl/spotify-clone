@@ -1,0 +1,17 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const playButton = document.getElementById('play');
+    const trackSpan = document.getElementById('track');
+
+    let playing = false;
+
+    playButton.addEventListener('click', () => {
+        playing = !playing;
+        if (playing) {
+            playButton.textContent = 'Pause';
+            trackSpan.textContent = 'Sample Track';
+        } else {
+            playButton.textContent = 'Play';
+            trackSpan.textContent = 'No Track';
+        }
+    });
+});
